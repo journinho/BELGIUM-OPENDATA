@@ -9,4 +9,4 @@ prijzen.dropna(inplace=True)
 inflatie_per_productgroep = pd.concat([prijzen.iloc[:,:1],prijzen.iloc[:,-120:]],axis=1) # Puts them together row wise
 inflatie_per_productgroep.rename(columns={'TX_COICOP_NL_LVL4': 'Productgroep', 'YR_MTH': 'Index'}, inplace=True)
 inflatie_per_productgroep['Inflatie'] = inflatie_per_productgroep.iloc[:,-1:]
-inflatie_per_productgroep.to_csv('inflatie_per_productgroep.csv')
+inflatie_per_productgroep.to_csv('inflation/inflatie_per_productgroep.csv')
